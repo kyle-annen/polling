@@ -4,23 +4,27 @@ import {
 	Route,
 	Link
 } from 'react-router-dom';
+//import account wrapper
+import AccountsUIWrapper from './AccountsUIWrapper.jsx';
 
+//import components
 import App from '../ui/App.jsx';
 import About from '../ui/About.jsx';
+
 
 export default class AppContainerRouter extends React.Component {
 	render() {
 		return (
 			<Router>
 				<div>
-
-					<nav>
+					<nav className="blue">
 						<div className="nav-wrapper">
 							<Link className="brand-logo center" to="/">Polling</Link>
-							<ul id="nav-mobile" className="left hid-on-med-and-down">
+							<ul id="mobile-nav" className="right hide-on-med-and-down">
 								<li><Link to="/">Home</Link></li>
 								<li><Link to="/about">About</Link></li>
 							</ul>
+							<AccountsUIWrapper className="float-xs-right"/>
 						</div>
 					</nav>
 
@@ -31,3 +35,5 @@ export default class AppContainerRouter extends React.Component {
 		)
 	}
 }
+
+
