@@ -23,8 +23,13 @@ export default class BreadCrumbs extends React.Component {
 			breadCrumbPaths.push(pathArray.slice(0, i + 1).join("/"));
 		}
 		pathArray[0] = "home";
+		console.log("after path generation");
+		console.log("paths: " + JSON.stringify(breadCrumbPaths));
+		console.log("names: " + JSON.stringify(pathArray));
 		for (let i = 0; i < pathArray.length; i++) {
-			breadCrumbs.push([breadCrumbPaths[i], pathArray[i]]);
+			if (pathArray[1] != "") {
+				breadCrumbs.push([breadCrumbPaths[i], pathArray[i]]);
+			}
 		}
 		console.log(breadCrumbs);
 		return breadCrumbs;
@@ -40,7 +45,7 @@ export default class BreadCrumbs extends React.Component {
 							<Link to={breadCrumb[0]}>
 								{breadCrumb[1]}
 							</Link>
-							{index < breadCrumbs.length - 1 ? <i className="fa fa-caret-right breadcrumb-caret" aria-hidden="true"></i> : ""}
+							{index < breadCrumbs.length - 1 && breadCrumbs.length > 1 ? <i className="fa fa-caret-right breadcrumb-caret" aria-hidden="true"></i> : ""}
 						</a>
 					))}
 				</div>
