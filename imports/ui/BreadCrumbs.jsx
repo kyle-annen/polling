@@ -40,7 +40,7 @@ export default class BreadCrumbs extends React.Component {
 							<Link to={breadCrumb[0]}>
 								{breadCrumb[1]}
 							</Link>
-							{index < breadCrumbs.length - 1 ? "    >    " : ""}
+							{index < breadCrumbs.length - 1 ? <i className="fa fa-caret-right breadcrumb-caret" aria-hidden="true"></i> : ""}
 						</a>
 					))}
 				</div>

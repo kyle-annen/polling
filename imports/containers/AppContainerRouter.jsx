@@ -41,7 +41,7 @@ export default class AppContainerRouter extends React.Component {
 						<div className="nav-wrapper">
 							<div className="col s12">
 								<Link className="brand-logo center" to="/">Polling</Link>
-								<ul id="mobile-nav" className="right hide-on-med-and-down">
+								<ul id="mobile-nav" className="right">
 									<li><Link to="/">Home</Link></li>
 									<li><Link to="/about">About</Link></li>
 									<Dropdown trigger={<li id="poll-button"><Link to="#">Polls</Link></li>}>
