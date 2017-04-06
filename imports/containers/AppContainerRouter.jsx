@@ -55,8 +55,10 @@ export default class AppContainerRouter extends React.Component {
 						</div>
 					</nav>
 					<BreadCrumbs />
-					<Route exact path="/" component={App} />
-					<Route path="/about" component={About} />
+					<div className="container">
+						<Route exact path="/" component={App} />
+						<Route path="/about" component={About} />
+					</div>
 				</div>
 			</Router>
 		)

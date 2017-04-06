@@ -1,0 +1,3 @@
+- Fix bread crumb logic in BreadCrumbs component
+- Style login drop down
+- style login link / caret
