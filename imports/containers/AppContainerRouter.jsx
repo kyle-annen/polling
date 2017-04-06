@@ -32,7 +32,7 @@ export default class AppContainerRouter extends React.Component {
 
 	render() {
 		//makes dropdown in nav work
-		activateDropdown();
+		this.activateDropdown();
 		return (
 			<Router>
 				<div>
@@ -52,12 +52,9 @@ export default class AppContainerRouter extends React.Component {
 								</ul>
 								<AccountsUIWrapper className="float-xs-right"/>
 							</div>
-							<div class="col s12">
-								<BreadCrumbs />
-							</div>
 						</div>
 					</nav>
-
+					<BreadCrumbs />
 					<Route exact path="/" component={App} />
 					<Route path="/about" component={About} />
 				</div>
